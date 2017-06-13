@@ -18,9 +18,7 @@ public class NameAndInitials {
         char initFirstName = firstName.charAt(0);
         char initMiddleName = middleName.charAt(0);
         char initLastName = lastName.charAt(0);
-        System.out.print(initFirstName);
-        System.out.print(initMiddleName);
-        System.out.print(initLastName);
+        System.out.print(initFirstName+""+initMiddleName+""+initLastName);
 
 
 
