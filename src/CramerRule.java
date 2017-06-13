@@ -16,15 +16,15 @@ public class CramerRule {
         double b = keyboard.nextDouble();
         System.out.println("provide the value of e");
         double e = keyboard.nextDouble();
-        System.out.println("provide the balue of c");
+        System.out.println("provide the value of c");
         double c = keyboard.nextDouble();
         System.out.println("provide the value of d");
         double d = keyboard.nextDouble();
         System.out.println("provide the value of f");
         double f = keyboard.nextDouble();
 
-        double x = (e*d-b*f)/(a*d-b*c);
-        double y = (a*f-e*c)/(a*d-b*c);
+        double x = (e*d - b*f) / (a*d - b*c);
+        double y = (a*f - e*c) / (a*d - b*c);
 
         System.out.println("x= "+x);
         System.out.println("y= "+y);
