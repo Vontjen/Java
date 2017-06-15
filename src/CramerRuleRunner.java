@@ -14,6 +14,6 @@ public class CramerRuleRunner {
                 keyboard.nextDouble(),
                 keyboard.nextDouble(),
                 keyboard.nextDouble());
-        System.out.printf("x = %.2f \ny = %.2f", restult[0],restult[1]);;
+        System.out.printf("x = %.2f \ny = %.2f", restult[0],restult[1]);
     }
 }
