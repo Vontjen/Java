@@ -1,7 +1,7 @@
 package be.vdab.bees;
 
 /**
- * Created by vdabcursist on 15/06/2017.
+ * Created by Vontjen on 15/06/2017 01:50 .
  */
 
 public class Worker {
