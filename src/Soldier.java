@@ -3,23 +3,27 @@
  */
 public class Soldier {
 
-    private int health;
+    private double health;
     private int armour;
     private Weapon weapon;
 
-    public Soldier(int health, int armour) {
+    public Soldier(double health, int armour, Weapon weapon) {
         this.health = health;
         this.armour = armour;
+        this.weapon = weapon;
     }
 
-    public int attack(){
+    public int attack(Soldier soldier){
         int damageDone;
         if(weapon.isSharpened()==true){
             damageDone = (weapon.getStrength());
-            weapon.setSharpnessCounter(+1);
+            soldier.setHealth(soldier.defend(damageDone)) ;
+            weapon.setSharpnessCounter(weapon.getSharpnessCounter()+1);
 
             if(weapon.getSharpnessCounter()==5){
                 weapon.setSharpened(false);
+                System.out.println("This bee can't attack anymore ");
+                this.health=0;
 
             }
 
@@ -34,19 +38,39 @@ public class Soldier {
 
     public int defend(int damageReceived){
         if(this.armour>=100){
-            damageReceived=0;
             armour -= damageReceived;
+            System.out.println("FULLY BUFFED - NO DAMAGE TAKEN");
+
         }else {
-            damageReceived= damageReceived - (damageReceived * (armour/100));
+            armour -= damageReceived;
+            double damageInflicted = (damageReceived - (damageReceived * (armour / 100.0)));
+            System.out.println("DMG INFLICTED: " + damageInflicted);
+            this.health= health- damageInflicted;
         }
-        return damageReceived;
+        return (int)this.health;
     }
 
     public boolean isDefeated(){
-        if(health==0){
+        if(health<=0){
             return true;
         }else {
             return false;
         }
+    }
+
+    public double getHealth() {
+        return health;
+    }
+
+    public int getArmour() {
+        return armour;
+    }
+
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public void setHealth(double health) {
+        this.health = health;
     }
 }
