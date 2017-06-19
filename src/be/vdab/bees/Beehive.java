@@ -11,6 +11,16 @@ public class Beehive {
         Queen beyonce = new Queen(0, 120);
         Soldier bumble = new Soldier(100,0,new Weapon(30,2));
         Soldier tumble = new Soldier(100, 0, new Weapon(20,3));
+        Nurse n = new Nurse("Janice");
+        n.fly(); //because Nurse is a bee
+        n.eat(); //because Nurse is an insect
+
+        w1.getCapacity(); //because w is a worker
+        w1.eat();
+        w1.fly();
+
+        //This below doesn't make sense, make Bee class abstract
+        //Bee b = new Bee("John");
 
 
         while (bumble.isDefeated() == false && tumble.isDefeated() == false){

@@ -35,17 +35,18 @@ public class MyPoint {
 
 
     public String toString() {
-        return "("+x+", "+y+")";
+        return "(" + x + ", " + y + ")";
     }
 
-    public double distance(int x2, int y2){
-        double distance=Math.sqrt(Math.pow((x2-x),2) + Math.pow((y2-y),2));
+
+    public double distance(int x2, int y2) {
+        double distance = Math.sqrt(Math.pow((x2 - x), 2) + Math.pow((y2 - y), 2));
         return distance;
 
     }
 
-    public double distance(MyPoint another){
-        double distance=Math.sqrt(Math.pow((another.getX()-x),2) + Math.pow((another.getY()-y),2));
+    public double distance(MyPoint another) {
+        double distance = Math.sqrt(Math.pow((another.getX() - x), 2) + Math.pow((another.getY() - y), 2));
         return distance;
     }
 }
