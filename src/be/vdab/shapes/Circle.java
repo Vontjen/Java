@@ -7,10 +7,11 @@ public class Circle extends Shape {
     private double radius;
 
     public Circle() {
-        radius=1.0;
+        this.radius=1.0;
     }
 
     public Circle(double radius) {
+        super(); //optioneel, de contructor voert sowieso de default superconstructor uit als dit niet is opgegeven.
         this.radius = radius;
     }
 
@@ -27,14 +28,18 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
-    public double getArea(){
-        double area = Math.PI*radius*radius;
-        return area;
+    /*
+    better area and perimeter than getArea and getPerimeter, getters and setters only apply to initialized variables by convention.
+     */
+
+    public double area(){
+        return Math.PI*radius*radius;
+
     }
 
-    public double getPerimeter(){
-        double perimeter = 2*Math.PI*radius;
-        return perimeter;
+    public double perimeter(){
+        return 2*Math.PI*radius;
+
     }
 
     @Override

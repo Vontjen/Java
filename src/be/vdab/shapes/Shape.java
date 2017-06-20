@@ -3,14 +3,18 @@ package be.vdab.shapes;
 /**
  * Created by vdabcursist on 19/06/2017.
  */
-public class Shape {
+public abstract class Shape {
 
     private String color;
     private boolean filled;
 
     public Shape(){
-        this.color= "red";
-        this.filled= true;
+        //optie 1
+        //this.color= "red";
+        //this.filled= true;
+        //optie 2
+        this("red", true);
+
     }
 
     public Shape(String color, boolean filled) {
@@ -36,9 +40,15 @@ public class Shape {
 
     @Override
     public String toString() {
-        String fill;
-        if(filled) {fill= "filled";}
-        else {fill = "Not filled";}
-        return "A shape with color of "+color+" and "+fill;
+        return "A shape with color of "+color+" and "+(!filled? "not": "" )+" filled in";
     }
+
+    public abstract double area();
+
+    public abstract double perimeter();
+
+
+
+
+
 }
