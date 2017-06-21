@@ -40,7 +40,7 @@ public abstract class Shape {
 
     @Override
     public String toString() {
-        return "A shape with color of "+color+" and "+(!filled? "not": "" )+" filled in";
+        return "A shape with color of "+color+" and "+(!filled? "not ": "" )+"filled in";
     }
 
     public abstract double area();
