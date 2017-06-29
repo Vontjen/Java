@@ -28,7 +28,7 @@ public class MyTriangle {
 
     @Override
     public String toString() {
-        return "Trianle @ ("+v1.getX()+", "+v1.getY()+"), ("+v2.getX()+", "+v2.getY()+"), ("+v3.getX()+", "+v3.getY()+")";
+        return "Triangle @ ("+v1.getX()+", "+v1.getY()+"), ("+v2.getX()+", "+v2.getY()+"), ("+v3.getX()+", "+v3.getY()+")";
     }
 
     public void printType(){

@@ -13,5 +13,7 @@ public class ShapeRunner {
 
         System.out.println(c.area());
 
+        System.out.println(r.toString());
+
     }
 }
