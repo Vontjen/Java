@@ -44,6 +44,12 @@ public class Main {
 
         Collections.sort(names, (a,b) -> b.compareTo(a));
 
+        names.forEach(s -> System.out.println(s));
+
+        names.forEach(System.out::println);
+
+        names.removeIf(s -> !s.startsWith("S"));
+
 
     }
 
